@@ -107,7 +107,7 @@ footer{
         display: grid;
         grid-template-columns:1fr 1fr;
         grid-template-rows: auto auto;
-        max-width: 850px;
+        max-width: 800px;
         margin: 0 auto;
        
     }
