@@ -1,0 +1,120 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+  :root{
+    /*Primary colors*/
+    --cyan: hsl(179, 62%, 43%);
+    --lighter-cyan: hsl(179, 62%, 50%);
+    --bright-yellow: hsl(71, 73%, 54%);
+
+    /*Neutral colors*/
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+
+    /*font family*/
+    --font-main: 'Karla', sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/*Css reset*/
+/*Use a more-intuitive box-sizing model.*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    /*padding:0;*/
+}
+
+body{
+    font-family: var(--font-main);
+    font-size: 1rem; 
+    font-weight: var(--fw-regular);
+    background-color: var(--light-gray);
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    margin: 1.5rem;
+}
+.container{
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+}
+.card1{
+    background-color: #fff;
+    line-height: 1.5rem;
+    padding: 1.8rem;
+}
+.card1 .heading2 {
+    color: var(--cyan);
+    margin-bottom: 1.2rem;
+}
+.card1 .heading3{
+    line-height: 1.3rem;
+    color: var(--bright-yellow);
+    margin-bottom: 1rem;
+}
+.card1 p {
+color: var(--grayish-blue);
+}
+.card2 {
+    background-color: var(--cyan);
+    color:#fff; 
+    padding: 1.8rem;
+    line-height: 2.5rem;
+}
+.heading2{
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+.card2 .special-text span{
+    font-size: 2rem;
+}
+.card2 .special-text span + span {
+    font-size: 1.2rem;
+    color: hsla(0, 0%, 100%, 0.6);
+    vertical-align: top;
+}
+.card2 .button-like {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--bright-yellow);
+    color: #fff;
+    padding: 0.5rem ;
+    border-radius: 0.5rem;
+    margin-top: 1.2rem;
+    width: 70%;
+    text-align: center;
+}
+.card3{
+    background-color: var(--lighter-cyan);
+    color: #fff;
+    padding: 1.8rem;
+    line-height: 1.2rem;
+}
+.card3 .numberless-list{
+    list-style: none;
+    padding:0.5rem;
+    font-size: 0.9rem;
+}
+footer{
+    margin-top: 2rem;
+}
+@media (min-width:600px){
+    .container{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: auto auto;
+        max-width: 850px;
+        margin: 0 auto;
+       
+    }
+    .card1{
+        grid-column: span 2;
+    }
+    .card2, .card3{
+        grid-column: span 1;
+    }
+}
